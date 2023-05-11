@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# MeetQuickly
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MeetQuickly is an AI google chrome extension that enables users to instantly generate an email about scheduling a Zoom meeting.
 
-## Available Scripts
+## Description
+The singular purpose of this chrome extension is to generate an email to schedule a Zoom meeting with a friend, colleague, or anyone. I thought having an extension such as this would be very useful for someone in sales, marketing, customer service teams, or just any working person because there are usually tons of meetings to schedule or attend. Having an extension that can create meetings in a short amount of time would definitely save time and money. The extension itself is very simple but I wanted to demonstrate my knowledge of relevant technologies such as using the OpenAI api, which is widely used by many companies and even involve.ai itself. 
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+Clone the repository to an empty folder.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open up your terminal to download all the necessary dependencies by typing in:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+```
 
-### `npm test`
+  * Go to [OpenAI](openai.com) to create an api key to access their api.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * Replace the text after Bearer in the authorization section of the generate.js file with your actualy OpenAI api key.
 
-### `npm run build`
+Go back into the terminal and type in:
+```bash
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will allow Google Chrome to access the manifest.json file that is needed to run the extension on the browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Usage
+  * To access the google chrome extension in your browser make sure to enter this into the address bar **chrome://extensions**.
+  * On the top right of the browser make sure to turn on the Developer mode.
+  * On the left click on the Load unpacked button.
+  * A popup will appear telling you to select the extension directory. 
+    * What you need to do here is locate the folder that you cloned this repository to then go into the folder and make sure to select the build folder.
+  * **_VOILA_** your very own google chrome extension will appear.
+  * Make sure to click on the puzzle piece icon located on the top right of your browser and pin the MeetQuickly extension so you can use it anytime!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Notes
+  * With extra time I would have made the extension a lot prettier, created tests, and another feature that would send the generated email directly to the person you are scheduling the meeting with.
