@@ -5,7 +5,7 @@ const generate = async (name, email, date) => {
   const response = await fetch("https://api.openai.com/v1/completions", {
     method: "POST",
     headers: {
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer add_you_openai_api_key_here`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
